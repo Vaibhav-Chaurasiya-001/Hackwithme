@@ -3,6 +3,47 @@ if (history.scrollRestoration) {
   history.scrollRestoration = 'manual';
 }
 
+// Convert hash links to custom attributes to prevent showing destination in browser status bar on hover
+function initScrollLinks() {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    const target = a.getAttribute('href');
+    a.removeAttribute('href');
+    a.setAttribute('data-scroll-to', target);
+    a.style.cursor = 'pointer';
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initScrollLinks);
+} else {
+  initScrollLinks();
+}
+
+// Global click handler for smooth scrolling
+document.addEventListener('click', (e) => {
+  const scrollTarget = e.target.closest('[data-scroll-to]');
+  if (scrollTarget) {
+    e.preventDefault();
+    const selector = scrollTarget.getAttribute('data-scroll-to');
+    if (selector === '#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.querySelector(selector);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    // Close mobile menu if open
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    if (hamburger && navLinks && navLinks.classList.contains('open')) {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+});
+
 // Detect reload/refresh
 const isReload = 
   (performance.getEntriesByType && performance.getEntriesByType('navigation')[0] && performance.getEntriesByType('navigation')[0].type === 'reload') ||
