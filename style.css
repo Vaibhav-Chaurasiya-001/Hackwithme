@@ -424,7 +424,7 @@
     }
 
     .stat-num {
-      font-family: var(--font-display);
+      font-family: 'Roboto', sans-serif;
       font-size: 26px;
       font-weight: 700;
       color: var(--text);
@@ -432,14 +432,14 @@
     }
 
     .stat-label { 
+      font-family: 'Roboto', sans-serif;
       font-size: 12px; 
       color: var(--text-sec); 
-      font-weight: 500; 
+      font-weight: 700; 
       margin-top: 4px;
       display: flex;
       align-items: center;
       gap: 6px;
-      font-family: var(--font);
       letter-spacing: 0;
     }
 
