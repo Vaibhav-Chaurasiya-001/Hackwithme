@@ -641,14 +641,19 @@
       z-index: 5;
     }
 
-    /* â”€â”€ SECTION COMMON â”€â”€ */
+    /* ── SECTION COMMON ── */
     section { 
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 96px 48px; 
     }
 
     .section-inner { 
       max-width: 1000px; 
       margin: 0 auto; 
+      width: 100%;
     }
 
     .section-label {
