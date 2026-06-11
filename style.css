@@ -32,6 +32,11 @@
       --bg-nav-scrolled: rgba(255, 255, 255, 0.96);
     }
 
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
     html { 
       scroll-behavior: smooth; 
     }
@@ -41,7 +46,6 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.62;
-      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -263,7 +267,7 @@
 
     /* â”€â”€ HERO SECTION â”€â”€ */
     .hero {
-      min-height: calc(100vh - 96px);
+      min-height: calc(100vh - 64px); /* Adjusted from 96px because ticker-bar is commented out, eliminating the bottom black peaking bar */
       display: flex;
       align-items: center;
       padding: 48px 48px;
