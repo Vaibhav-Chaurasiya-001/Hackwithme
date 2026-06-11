@@ -270,7 +270,7 @@
       min-height: calc(100vh - 64px); /* Adjusted from 96px because ticker-bar is commented out, eliminating the bottom black peaking bar */
       display: flex;
       align-items: center;
-      padding: 48px 48px;
+      padding: 80px 64px;
       position: relative;
       overflow: hidden; /* Prevent horizontal overflow from absolute children like grid-floor */
     }
@@ -281,7 +281,7 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 40px;
+      gap: 60px;
       align-items: center;
     }
 
@@ -647,7 +647,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 96px 48px; 
+      padding: 140px 64px; 
     }
 
     .section-inner { 
@@ -721,7 +721,7 @@
     .workshop-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-      gap: 24px;
+      gap: 36px;
     }
 
     .workshop-card {
@@ -846,7 +846,7 @@
     .about-grid {
       display: grid;
       grid-template-columns: 0.85fr 1.15fr;
-      gap: 64px;
+      gap: 88px;
       align-items: center;
     }
 
@@ -954,8 +954,8 @@
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-      margin-top: 48px;
+      gap: 32px;
+      margin-top: 64px;
     }
 
     .feature-card {
@@ -1025,8 +1025,8 @@
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      margin-top: 48px;
+      gap: 32px;
+      margin-top: 64px;
     }
 
     .testimonial-card {
@@ -1097,9 +1097,9 @@
     .cta-dual-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 40px;
+      gap: 56px;
       align-items: stretch;
-      margin-top: 48px;
+      margin-top: 64px;
       max-width: 1140px;
       width: 100%;
       margin-left: auto;
@@ -1698,7 +1698,7 @@
 /* ── REGISTRATION SECTION REDESIGN (LIGHT THEME) ── */
 .registration-section {
   background: #ffffff !important;
-  padding: 96px 48px;
+  padding: 140px 64px;
   position: relative;
   overflow: hidden;
 }
@@ -1722,7 +1722,7 @@
   grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
   align-items: stretch;
-  margin-top: 48px;
+  margin-top: 64px;
 }
 
 /* LEFT COLUMN: Interactive Form */
