@@ -266,8 +266,9 @@
       min-height: calc(100vh - 96px);
       display: flex;
       align-items: center;
-      padding: 80px 48px;
+      padding: 48px 48px;
       position: relative;
+      overflow: hidden; /* Prevent horizontal overflow from absolute children like grid-floor */
     }
 
     .hero-container {
@@ -296,7 +297,7 @@
       font-weight: 500;
       padding: 6px 12px;
       border-radius: 4px;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       letter-spacing: 0.2px;
     }
 
@@ -319,8 +320,8 @@
     .hero h1.home-hero-title {
       position: relative;
       display: inline-block;
-      padding-bottom: 12px;
-      margin-bottom: 32px;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
     }
 
     .hero h1.home-hero-title::after {
@@ -351,7 +352,7 @@
       font-size: 16px;
       color: var(--text-sec);
       max-width: 540px;
-      margin-bottom: 40px;
+      margin-bottom: 24px;
       line-height: 1.65;
     }
 
@@ -409,8 +410,8 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      margin-top: 36px;
-      padding-top: 24px;
+      margin-top: 24px;
+      padding-top: 16px;
       border-top: 1px solid var(--border);
     }
 
@@ -453,7 +454,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 580px;
+      height: 480px;
       position: relative;
       perspective: 1200px;
       transform-style: preserve-3d;
@@ -525,6 +526,7 @@
 
     /* Minimal tech telemetry lines inside the pod */
     .robot-pod::before {
+      display: none; /* Removed telemetry scanlines per user request */
       content: '';
       position: absolute;
       inset: 0;
@@ -1641,7 +1643,7 @@
       }
       
       .hero { 
-        padding: 48px 24px; 
+        padding: 32px 24px; 
       }
 
       .workshops-header { 
